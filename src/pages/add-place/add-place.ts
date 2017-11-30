@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { SetLocationPage } from '../set-location/set-location';
 
 @IonicPage()
 @Component({
