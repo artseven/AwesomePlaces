@@ -9,7 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SetLocationPage } from '../pages/set-location/set-location';
-
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     MyApp,
@@ -20,7 +20,10 @@ import { SetLocationPage } from '../pages/set-location/set-location';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR_KEY'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
