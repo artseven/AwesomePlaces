@@ -1,5 +1,6 @@
+import { PlacePage } from '../place/place';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 import { AddPlacePage } from '../add-place/add-place';
 import { Place } from '../../models/place';
 import { PlacesService } from '../../services/places';
@@ -12,7 +13,7 @@ export class HomePage {
   addPlacePage = AddPlacePage;
   places: Place[];
   constructor(
-    public navCtrl: NavController,
+    public modalCtrl: ModalController,
     private placesSrv: PlacesService
   ) {
 
@@ -20,5 +21,10 @@ export class HomePage {
 
   ionViewWillEnter() {
     this.places = this.placesSrv.loadPlaces();
+  }
+
+  onOpenPlace(place: Place) {
+    const modal = this.modalCtrl.create(PlacePage, {place: place});
+    modal.present();
   }
 }
