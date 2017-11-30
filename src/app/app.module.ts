@@ -13,6 +13,8 @@ import { SetLocationPage } from '../pages/set-location/set-location';
 import { AgmCoreModule } from '@agm/core';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera } from '@ionic-native/camera';
+import { File } from '@ionic-native/file';
+import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +28,8 @@ import { Camera } from '@ionic-native/camera';
     IonicModule.forRoot(MyApp),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD18HWpia1r_cksj0BKYYw9ykojnUhIbsY'
-    })
+    }),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,7 +45,9 @@ import { Camera } from '@ionic-native/camera';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
     Camera,
-    PlacesService
+    PlacesService,
+    File,
+    Storage
   ]
 })
 export class AppModule {}
