@@ -11,6 +11,7 @@ import { HomePage } from '../pages/home/home';
 import { SetLocationPage } from '../pages/set-location/set-location';
 import { AgmCoreModule } from '@agm/core';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Camera } from '@ionic-native/camera';
 @NgModule({
   declarations: [
     MyApp,
@@ -38,7 +39,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Geolocation
+    Geolocation,
+    Camera
   ]
 })
 export class AppModule {}
