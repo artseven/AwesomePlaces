@@ -1,3 +1,4 @@
+import { PlacesService } from '../services/places';
 import { PlacePage } from '../pages/place/place';
 import { AddPlacePage } from '../pages/add-place/add-place';
 import { BrowserModule } from '@angular/platform-browser';
@@ -40,7 +41,8 @@ import { Camera } from '@ionic-native/camera';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Geolocation,
-    Camera
+    Camera,
+    PlacesService
   ]
 })
 export class AppModule {}
