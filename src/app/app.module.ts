@@ -26,7 +26,16 @@ import { IonicStorageModule } from '@ionic/storage';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      // can switch text of the back button to any string
+      backButtonText: 'Back',
+      // describe platform specifics
+      platforms: {
+        ios: {
+          backButtonText: 'Home'
+        }
+      }
+    }),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD18HWpia1r_cksj0BKYYw9ykojnUhIbsY'
     }),
