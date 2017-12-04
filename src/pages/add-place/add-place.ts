@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, LoadingController, ModalController, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, LoadingController, ModalController, ToastController } from 'ionic-angular';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
 import { SetLocationPage } from '../set-location/set-location';
 import { Location } from '../../models/location';
