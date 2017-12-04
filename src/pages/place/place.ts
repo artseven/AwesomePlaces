@@ -1,6 +1,6 @@
 import { PlacesService } from '../../services/places';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavParams, ViewController } from 'ionic-angular';
 import { Place } from '../../models/place';
 
 @IonicPage()
